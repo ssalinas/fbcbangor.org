@@ -1,0 +1,21 @@
+<% content_for :title do %>Home<% end %>
+<div class='container'>
+    <div class='row fbcheader'>
+        <div>
+            <h1>Welcome to First Baptist Church of Bangor, ME!</h1>
+            <p></p>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-lg-6'>
+            <%= render 'pages/home/facebook_feed' %>
+        </div>
+        <div class='col-lg-6'>
+            <div class='rightsidecol'>
+                <%= render 'pages/home/image_carousel' %>
+                <%= render 'pages/home/announcements' %>
+                <%= render 'pages/home/event_list' %>
+            </div>
+        </div>
+    </div>
+</div>

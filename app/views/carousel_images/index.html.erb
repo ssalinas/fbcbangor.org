@@ -1,0 +1,27 @@
+<h1>Listing carousel_images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th>Caption</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @carousel_images.each do |carousel_image| %>
+      <tr>
+        <td><%= carousel_image.url %></td>
+        <td><%= carousel_image.caption %></td>
+        <td><%= link_to 'Show', carousel_image %></td>
+        <td><%= link_to 'Edit', edit_carousel_image_path(carousel_image) %></td>
+        <td><%= link_to 'Destroy', carousel_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Carousel image', new_carousel_image_path %>

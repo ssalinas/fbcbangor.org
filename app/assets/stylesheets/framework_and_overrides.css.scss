@@ -1,6 +1,17 @@
 // import the CSS framework
 @import "bootstrap";
 
+// FBC Colors
+$teal: #086FA1;
+$light-teal: #3CA0D0;
+$green: #25D500;
+$light-green: #59EA3A;
+$orange: #FF8900;
+$light-orange: #FFA640;
+$purple: #2E16B1;
+$light-purple: #604BD8;
+
+
 // make all images responsive by default
 img {
   @extend .img-responsive;
@@ -43,3 +54,82 @@ section {
   @extend .row;
   margin-top: 20px;
   }
+
+// Navigation
+footer, .navbar-inverse {
+  background-color: $teal;
+  border-color: $purple;
+  color: white;
+  .navbar-brand, .navbar-nav > li > a {
+    color: white;
+  }
+}
+
+// other
+th {
+  text-align: center;
+}
+
+.google_map {
+  width: 80%;
+  height: auto;
+}
+
+.rightsidecol {
+  overflow: scroll;
+}
+
+.facebookfeed {
+    overflow: scroll;
+    .right {
+        -ms-transform: rotate(-5deg); /* IE 9 */
+        -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+        transform: rotate(-5deg);
+    }
+    .left {
+        -ms-transform: rotate(4deg); /* IE 9 */
+        -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
+        transform: rotate(4deg);
+    }
+}
+.facebookpost {
+    box-shadow: 6px 2px 3px #aaaaaa;
+    border: 1px solid #BFBFBF;
+    padding: 10px 10px 20px 10px;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.announcements, .eventcalendar {
+    box-shadow: 6px 2px 3px #aaaaaa;
+    border: 1px solid #BFBFBF;
+    padding: 5px 5px 10px 5px;
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    .timestamp {
+      color: gray;
+      text-align: right;
+    }
+    .announcement {
+      text-align: left;
+      box-shadow: 1px 1px 1px #aaaaaa;
+      padding: 2px;
+    }
+}
+.eventcalendar, .announcements, .imagecarousel {
+  margin-top: 20px;
+}
+.row.fbcheader {
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+  font-size: 1.5em;
+  width: 100%;
+}
+.fbimage {
+  width: 40%;
+  margin: auto;
+}

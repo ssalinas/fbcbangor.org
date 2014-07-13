@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @carousel_image.url %>
+</p>
+
+<p>
+  <strong>Caption:</strong>
+  <%= @carousel_image.caption %>
+</p>
+
+<%= link_to 'Edit', edit_carousel_image_path(@carousel_image) %> |
+<%= link_to 'Back', carousel_images_path %>
