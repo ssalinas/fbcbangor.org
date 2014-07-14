@@ -82,5 +82,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = { host: Rails.application.secrets.domain_name }
+  config.cache_classes = true
+  config.serve_static_assets = true
   config.assets.compile = true
+  config.assets.digest = true
 end
