@@ -18,6 +18,8 @@ gem 'koala'
 gem 'devise'
 gem 'gon'
 
+gem 'rails_12factor', group: :production
+
 group :development do
   gem 'dotenv'
   gem 'better_errors'
