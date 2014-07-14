@@ -59,7 +59,7 @@ Rails.application.configure do
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-  config.assets.precompile += %w( google_map.js )
+  config.assets.precompile += %w( events.js fullcalendar.js gcal.js jquery-ui-1.10.3.custom.min.js pages.js framework_and_overrides.css.scss fullcalendar.css jquery-ui-1.10.3.custom.css application.js application.css.scss )
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
