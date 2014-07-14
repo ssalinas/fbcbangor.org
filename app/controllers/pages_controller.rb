@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   def home
     @facebook_posts = Facebook.new.facebook_feed
     @announcements = Announcement.order('updated_at').last(3)
+    @carousel_images = CarouselImage.all
     set_fullcalendar_options
   end
 

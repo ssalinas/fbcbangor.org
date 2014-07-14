@@ -1,7 +1,7 @@
 <div class='container'>
     <br>
     <div class='row'>
-        <%= image_tag "http://maps.google.com/maps/api/staticmap?size=600x400&sensor=true&zoom=15&markers=#{@location[:latitude]}%2C#{@location[:longitude]}", class: 'google_map' %>
+        <%= link_to image_tag("http://maps.google.com/maps/api/staticmap?size=600x400&sensor=true&zoom=15&markers=#{@location[:latitude]}%2C#{@location[:longitude]}", class: 'google_map'), 'https://www.google.com/maps/place/56+Center+St,+Bangor,+ME+04401' %>
     </div>
     <div class='row' align='center'>
         <h3>56 Center Street - Bangor, ME 04401</h3>

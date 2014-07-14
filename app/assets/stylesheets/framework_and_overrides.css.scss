@@ -133,3 +133,14 @@ th {
   width: 40%;
   margin: auto;
 }
+.CarouselImg {
+  width: 100%;
+}
+.carousel-inner, .carousel-inner > .item > img{
+  width:auto;
+  max-height: 250px !important;
+}
+
+.carousel-caption {
+  text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+}
