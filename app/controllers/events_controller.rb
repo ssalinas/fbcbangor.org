@@ -25,6 +25,7 @@
 
     def get_events
       start_time = Time.at(params[:start].to_i).to_formatted_s(:db)
+      gon.startDate = start_time
       end_time   = Time.at(params[:end].to_i).to_formatted_s(:db)
 
       @events = Event.where('

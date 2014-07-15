@@ -48,6 +48,12 @@ html .fc,
 	width: 25%;
 	text-align: right;
 	}
+
+@media (max-width: 600px) {
+    .fc-header-right {
+        display: none;
+        }
+    }
 	
 .fc-header-title {
 	display: inline-block;

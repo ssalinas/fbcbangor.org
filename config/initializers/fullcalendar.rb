@@ -2,9 +2,9 @@ RECURRING_EVENTS_UPTO = (Date.today.beginning_of_year + 1.years).to_time
 Fullcalendar::Configuration = {
   'editable'    => false,
   'header'      => {
-    left: 'prev,next today',
+    left: 'prev,next',
     center: 'title',
-    right: 'month,agendaWeek,agendaDay'
+    right: 'month,agendaWeek'
   },
   'defaultView' => 'month',
   'height'      => 500,

@@ -4,16 +4,15 @@
       <div class='calendar'></div>
     </div>
     <div id="event_desc_dialog" class="dialog" style="display:none;"></div>
-    </div>
-
-    <%= javascript_include_tag "events" %>
-    <%= javascript_include_tag 'fullcalendar' %>
-    <%= javascript_include_tag 'gcal' %>
-    <%= javascript_include_tag 'jquery-ui-1.10.3.custom.min' %>
-
-    <script>
-      $(document).ready(function(){
-        $('.calendar').fullCalendar(gon.full_calendar_options);
-      });
-    </script>
 </div>
+
+<%= javascript_include_tag "events" %>
+<%= javascript_include_tag 'fullcalendar' %>
+<%= javascript_include_tag 'gcal' %>
+<%= javascript_include_tag 'jquery-ui-1.10.3.custom.min' %>
+
+<script>
+  $(document).ready(function(){
+    $('.calendar').fullCalendar(gon.full_calendar_options);
+  });
+</script>

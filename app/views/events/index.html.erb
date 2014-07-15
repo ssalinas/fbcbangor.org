@@ -18,6 +18,14 @@
 
 <script>
   $(document).ready(function(){
+    if ($(window).width() < 600) {
+      gon.full_calendar_options['header'] = {
+        left: 'prev,next',
+        center: 'title',
+        right: 'basicWeek,basicDay'
+        }
+      gon.full_calendar_options['defaultView'] = 'basicWeek'
+    }
     $('.calendar').fullCalendar(gon.full_calendar_options);
   });
 </script>

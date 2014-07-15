@@ -11,7 +11,7 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
-
+  config.assets.precompile += %w( events.js fullcalendar.js gcal.js jquery-ui-1.10.3.custom.min.js pages.js framework_and_overrides.css.scss fullcalendar.css jquery-ui-1.10.3.custom.css application.js application.css.scss )
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
