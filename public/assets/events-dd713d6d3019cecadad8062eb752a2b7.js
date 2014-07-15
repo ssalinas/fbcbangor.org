@@ -4,10 +4,8 @@
 $(window).resize(function(){
   if($(window).width() <= 600) {
     $('.calendar').fullCalendar('changeView', 'basicWeek','gotoDate', gon.startDate);
-    $('.calendar').fullCalendar('option', 'height', 200);
   } else if($(window).width() < 760 ) {
     $('.calendar').fullCalendar('changeView', 'agendaWeek','gotoDate', gon.startDate);
-    $('.calendar').fullCalendar('option', 'height', 300);
   } else {
     $('.calendar').fullCalendar('changeView', 'month','gotoDate', gon.startDate);
   }
