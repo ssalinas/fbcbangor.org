@@ -121,7 +121,7 @@
     end
 
     def set_fullcalendar_options
-      if user_signed_in? && current_user.is_admin?
+      if user_signed_in?
         @can_edit = true
         Fullcalendar::Configuration['editable'] = true
         Fullcalendar::Configuration['disableDragging'] = false
@@ -134,7 +134,7 @@
     end
 
     def layout_from_user
-      if user_signed_in? && current_user.is_admin?
+      if user_signed_in?
         'admin'
       else
         'application'

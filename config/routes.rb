@@ -19,7 +19,14 @@ Rails.application.routes.draw do
   get '/admin', to: 'admin#home', as: :admin_home
   resources :announcements
   resources :carousel_images
-  devise_for :users
+  devise_for :users, skip: [:registrations]
+  as :user do
+    get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
+    put 'users' => 'registrations#update', :as => 'user_registration'
+    get '/signup', to: 'registrations#new', as: :new_user_registration
+    post 'users', to: 'registrations#create', as: :user_registraion
+    delete 'users', to: 'registrations#destroy'
+  end
 
   # root path
   root to: 'pages#home'

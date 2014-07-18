@@ -12,6 +12,14 @@ module Fbcbangor
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    config.to_prepare do
+      Devise::SessionsController.layout 'admin'
+      Devise::RegistrationsController.layout 'admin'
+      Devise::ConfirmationsController.layout 'admin'
+      Devise::UnlocksController.layout 'admin'
+      Devise::PasswordsController.layout 'admin'
+    end
+
     # Up query for new relic
     config.middleware.use(WhatsUpDoc::Middleware, path: '/up')
 
