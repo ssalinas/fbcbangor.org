@@ -2,7 +2,7 @@
 <div class='facebookfeed'>
     <% @facebook_posts.each_with_index do |post, index| %>
         <% case post[:type] %>
-        <% when :picture %>
+        <% when :photo, :link %>
             <%= render 'pages/home/facebook_photo', {post: post, index: index} %>
         <% when :status %>
             <%= render 'pages/home/facebook_status', {post: post, index: index} %>
