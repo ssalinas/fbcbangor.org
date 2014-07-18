@@ -1,9 +1,8 @@
   class EventsController < ApplicationController
-
-    layout :layout_from_user
-
     before_filter :load_event, only: [:edit, :update, :destroy, :move, :resize]
     before_filter :determine_event_type, only: :create
+
+    layout :layout_from_user
 
     def index
       set_fullcalendar_options
@@ -27,24 +26,7 @@
       start_time = Time.at(params[:start].to_i).to_formatted_s(:db)
       gon.startDate = start_time
       end_time   = Time.at(params[:end].to_i).to_formatted_s(:db)
-
-      @events = Event.where('
-                  (starttime >= :start_time and endtime <= :end_time) or
-                  (starttime >= :start_time and endtime > :end_time and starttime <= :end_time) or
-                  (starttime <= :start_time and endtime >= :start_time and endtime <= :end_time) or
-                  (starttime <= :start_time and endtime > :end_time)',
-                  start_time: start_time, end_time: end_time)
-      events = []
-      @events.each do |event|
-        events << { id: event.id,
-                    title: event.title,
-                    description: event.description || '',
-                    start: event.starttime.iso8601,
-                    end: event.endtime.iso8601,
-                    allDay: event.all_day,
-                    recurring: (event.event_series_id) ? true : false }
-      end
-      render json: events.to_json
+      render json: Event.event_json_data(start_time, end_time)
     end
 
     def move

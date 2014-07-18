@@ -1,5 +1,4 @@
   class Event < ActiveRecord::Base
-
     attr_accessor :period, :frequency, :commit_button
 
     validates :title, :description, :presence => true
@@ -46,9 +45,31 @@
       event_series.save
     end
 
-    private
-
-      def make_date_time(original_time, difference_time, event_time = nil)
-        DateTime.parse("#{original_time.hour}:#{original_time.min}:#{original_time.sec}, #{event_time.try(:day) || difference_time.day}-#{difference_time.month}-#{difference_time.year}")
+    def self.event_json_data(start_time, end_time)
+      events = Event.where('
+                  (starttime >= :start_time and endtime <= :end_time) or
+                  (starttime >= :start_time and endtime > :end_time and starttime <= :end_time) or
+                  (starttime <= :start_time and endtime >= :start_time and endtime <= :end_time) or
+                  (starttime <= :start_time and endtime > :end_time)',
+                  start_time: start_time, end_time: end_time)
+      event_data = []
+      events.each do |event|
+        event_data << {
+          id: event.id,
+          title: event.title,
+          description: event.description || '',
+          start: event.starttime.iso8601,
+          end: event.endtime.iso8601,
+          allDay: event.all_day,
+          recurring: (event.event_series_id) ? true : false
+        }
       end
+      event_data.to_json
+    end
+
+  private
+
+    def make_date_time(original_time, difference_time, event_time = nil)
+      DateTime.parse("#{original_time.hour}:#{original_time.min}:#{original_time.sec}, #{event_time.try(:day) || difference_time.day}-#{difference_time.month}-#{difference_time.year}")
+    end
   end
