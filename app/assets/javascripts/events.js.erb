@@ -2,11 +2,11 @@
 // All this logic will automatically be available in application.js.
 
 $(window).resize(function(){
-  if($(window).width() <= 600) {
+  if($(window).width() <= 700) {
     $('.calendar').fullCalendar('changeView', 'basicWeek','gotoDate', gon.startDate);
     $('.calendar').fullCalendar('option', 'height', 200);
-  } else if($(window).width() < 760 ) {
-    $('.calendar').fullCalendar('changeView', 'agendaWeek','gotoDate', gon.startDate);
+  } else if($(window).width() < 900 ) {
+    $('.calendar').fullCalendar('changeView', 'basicWeek','gotoDate', gon.startDate);
     $('.calendar').fullCalendar('option', 'height', 300);
   } else {
     $('.calendar').fullCalendar('changeView', 'month','gotoDate', gon.startDate);

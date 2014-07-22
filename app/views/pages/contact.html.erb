@@ -1,7 +1,19 @@
 <div class='container'>
     <div class='row'>
-        <h3>56 Center Street</h3>
-        <h3>Bangor, ME 04401</h3>
-        <h3>(207) - 954 - 9694</h3>
+        <div class='col-md-6'>
+            <%= mail_to 'webmaster@fbcbangor.org' do %>
+                <h3>Email Us!</h3>
+                <p>
+            <% end %>
+            <br>
+            <h3>Call Us!</h3>
+            <h4>(207) 945 - 9694</h4>
+        </div>
+        <div class='col-md-6'>
+            <h3>Or Come Visit Us!</h3>
+            <p>56 Center Street</p>
+            <p>Bangor, ME 04401</p>
+            <p>Office Hours are from 9am to 12pm Monday to Friday</p>
+        </div>
     </div>
 </div>

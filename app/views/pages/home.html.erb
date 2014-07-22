@@ -1,13 +1,16 @@
 <% content_for :title do %>Home<% end %>
-<div class='container'>
-    <div class='row fbcheader'>
-        <div>
-            <h1>Welcome to First Baptist Church of Bangor, ME!</h1>
-            <p></p>
+<div class='jumbotron'>
+    <div class='container'>
+        <div class='row fbcheader'>
+            <%= image_tag 'church_logo.png' %>
+            <p>We are a church family where God's grace and unconditional love guide us to provide a spiritual home for faith, worship, mission, and fellowship. We celebrate the dignity of each person's journey with Jesus Christ</p>
         </div>
     </div>
+</div>
+<div class='container'>
     <div class='row'>
         <div class='col-sm-6'>
+            <p class='btn btn-primary btn-lg btn-block btn-custom disabled'>What's Happening at First Baptist?</p>
             <div class='leftsidecol'>
                 <%= render 'pages/home/image_carousel' %>
                 <%= render 'pages/home/announcements' %>
