@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140713194622) do
+ActiveRecord::Schema.define(version: 20140722205056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 20140713194622) do
   create_table "carousel_images", force: true do |t|
     t.string   "url"
     t.string   "caption"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contents", force: true do |t|
+    t.string   "page"
+    t.string   "section"
+    t.text     "content"
+    t.string   "image_src"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

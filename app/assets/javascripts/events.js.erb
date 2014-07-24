@@ -2,7 +2,7 @@
 // All this logic will automatically be available in application.js.
 
 $(window).resize(function(){
-  if($(window).width() <= 700) {
+  if($(window).width() <= 640 || screen.width < 640) {
     $('.calendar').fullCalendar('changeView', 'basicWeek','gotoDate', gon.startDate);
     $('.calendar').fullCalendar('option', 'height', 200);
   } else if($(window).width() < 900 ) {
