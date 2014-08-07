@@ -1,0 +1,19 @@
+<div class='container'>
+    <h1>Contact Us Page Content</h1>
+    <div class='row announcements'>
+        <h3>Church Phone Number</h3>
+        <%= render 'content_form', content: @phone, section: 'phone', page: 'contact' %>
+    </div>
+    <br>
+    <div class='row announcements'>
+        <h3>Office Address and Hours</h3>
+        <p>**HTML tags will be rendered**</p>
+        <%= render 'content_form', content: @office, section: 'office', page: 'contact' %>
+    </div>
+    <br>
+    <div class='row announcements'>
+        <h3>Email for Link on Contact Page</h3>
+        <%= render 'content_form', content: @email, section: 'email', page: 'contact' %>
+    </div>
+    <br>
+</div>

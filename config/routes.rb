@@ -27,6 +27,16 @@ Rails.application.routes.draw do
     post 'users', to: 'registrations#create', as: :user_registraion
     delete 'users', to: 'registrations#destroy'
   end
+  # content
+  resources :contents do
+    collection do
+      get :about
+      get :homepage
+      get :find_us
+      get :contact
+      get :info
+    end
+  end
 
   # root path
   root to: 'pages#home'

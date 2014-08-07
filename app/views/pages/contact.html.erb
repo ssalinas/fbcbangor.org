@@ -1,19 +1,17 @@
 <div class='container'>
     <div class='row'>
         <div class='col-md-6'>
-            <%= mail_to 'churchoffice@fbcbangor.org' do %>
+            <%= mail_to @email do %>
                 <h3>Email Us!</h3>
                 <p>
             <% end %>
             <br>
             <h3>Call Us!</h3>
-            <h4>(207) 945 - 9694</h4>
+            <h4><%= @phone %></h4>
         </div>
         <div class='col-md-6'>
             <h3>Or Come Visit Us!</h3>
-            <p>56 Center Street</p>
-            <p>Bangor, ME 04401</p>
-            <p>Office Hours are from 9am to 12pm Monday to Friday</p>
+            <%= @office.html_safe %>
         </div>
     </div>
 </div>

@@ -1,10 +1,10 @@
 <div class='container'>
     <div class='row'>
         <div class='col-sm-3 col-xs-6'>
-            <p>First Baptist of Bangor<br>56 Center Street<br>Bangor ME, 04401<br>(207) 945 - 9694</p>
+            <%= Content.where(page: 'home', section: 'footer_left').first.content.html_safe %>
         </div>
         <div class='col-sm-3 col-xs-6'>
-            <p>Weekly Services<br>Sunday 10:15 AM</p>
+            <%= Content.where(page: 'home', section: 'footer_right').first.content.html_safe %>
         </div>
         <div class="clearfix visible-xs-block"></div>
         <div class='col-sm-2 col-xs-4'>

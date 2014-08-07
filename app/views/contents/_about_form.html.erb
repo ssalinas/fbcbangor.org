@@ -1,0 +1,29 @@
+<%= simple_form_for(content) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+      <div class='row'>
+              <%= f.input :page, as: :hidden, input_html: {value: 'about'} %>
+          <div class='col-md-6'>
+              <%= f.input :section %>
+              <%= f.hint 'Header/Title for the section' %>
+          </div>
+      </div>
+      <div class='row'>
+          <div class='col-md-9'>
+              <%= f.input :content %>
+          </div>
+          <div class='col-md-3'>
+              <%= f.input :image_src %>
+          </div>
+      </div>
+  </div>
+  <div class='row'>
+      <div class='col-md-3'></div>
+      <div class='col-md-6'>
+        <div class="form-actions">
+            <%= f.button :submit %>
+        </div>
+    </div>
+  </div>
+<% end %>

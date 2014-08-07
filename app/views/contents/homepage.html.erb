@@ -1,0 +1,25 @@
+<div class='container'>
+    <h1>Contact Us Page Content</h1>
+    <div class='row announcements'>
+        <h3>Homepage Banner Image</h3>
+        <%= render 'content_form', content: @image, section: 'image', page: 'home' %>
+    </div>
+    <br>
+    <div class='row announcements'>
+        <h3>Homepage Slogan</h3>
+        <%= render 'content_form', content: @slogan, section: 'slogan', page: 'home' %>
+    </div>
+    <br>
+    <div class='row announcements'>
+        <h3>Left Footer Column</h3>
+        <p>**HTML tags will be rendered**</p>
+        <%= render 'content_form', content: @footer_left, section: 'footer_left', page: 'home' %>
+    </div>
+    <br>
+    <div class='row announcements'>
+        <h3>Right Footer Column</h3>
+        <p>**HTML tags will be rendered**</p>
+        <%= render 'content_form', content: @footer_right, section: 'footer_right', page: 'home' %>
+    </div>
+    <br>
+</div>

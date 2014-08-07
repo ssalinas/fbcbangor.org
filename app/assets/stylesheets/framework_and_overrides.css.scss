@@ -191,3 +191,9 @@ fieldset[disabled] .btn-custom.active {
   background-color: #086fa1;
   border-color: #086fa1;
 }
+
+.simple_form label, input, textarea {
+  width: 100%;
+  height: 100%;
+}
+

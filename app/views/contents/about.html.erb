@@ -1,0 +1,16 @@
+<div class='container'>
+    <h1>About Page Content</h1>
+    <% @contents.each do |content| %>
+        <div class='row announcements'>
+            <%= render 'about_form', content: content %>
+        </div>
+        <br>
+    <% end %>
+
+    <div class="btn-group" data-toggle="buttons-checkbox">
+        <a class="btn collapse-data-btn" data-toggle="collapse" href="#new_about">Add A New Section</a>
+    </div>
+    <div id="new_about" class="collapse">
+        <%= render 'about_form', content: Content.new %>
+    </div>
+</div>
