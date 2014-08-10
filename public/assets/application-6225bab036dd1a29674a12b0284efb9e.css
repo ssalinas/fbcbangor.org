@@ -8078,17 +8078,17 @@ button.close {
     display: none !important;
   }
 }
-/* line 16, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 17, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 img {
   margin: 0 auto;
 }
 
-/* line 21, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 22, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .navbar-brand {
   font-size: inherit;
 }
 
-/* line 46, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 47, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 main {
   background-color: #eee;
   padding-bottom: 80px;
@@ -8096,43 +8096,48 @@ main {
   margin-top: 51px;
 }
 
-/* line 53, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 54, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 section {
   margin-top: 20px;
 }
 
-/* line 59, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 60, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 footer, .navbar-inverse {
   background-color: #086fa1;
   border-color: #2e16b1;
   color: white;
 }
-/* line 63, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 64, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 footer .navbar-brand, footer .navbar-nav > li > a, .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
   color: white;
 }
 
 /* line 69, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+footer img {
+  max-height: 60px;
+}
+
+/* line 74, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 th {
   text-align: center;
 }
 
-/* line 73, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 78, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .google_map {
   width: 80%;
   height: auto;
 }
 
-/* line 78, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 83, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .leftsidecol {
   overflow: scroll;
 }
 
-/* line 82, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 87, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .facebookfeed {
   overflow: scroll;
 }
-/* line 84, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 89, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .facebookfeed .right {
   -ms-transform: rotate(-5deg);
   /* IE 9 */
@@ -8140,7 +8145,7 @@ th {
   /* Chrome, Safari, Opera */
   transform: rotate(-5deg);
 }
-/* line 89, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 94, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .facebookfeed .left {
   -ms-transform: rotate(4deg);
   /* IE 9 */
@@ -8149,7 +8154,7 @@ th {
   transform: rotate(4deg);
 }
 
-/* line 95, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 100, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .facebookpost {
   box-shadow: 6px 2px 3px #aaaaaa;
   border: 1px solid #BFBFBF;
@@ -8160,7 +8165,7 @@ th {
   text-align: center;
 }
 
-/* line 105, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 110, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .announcements, .eventcalendar {
   box-shadow: 6px 2px 3px #aaaaaa;
   border: 1px solid #BFBFBF;
@@ -8170,51 +8175,108 @@ th {
   margin: auto;
   text-align: center;
 }
-/* line 113, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 118, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .announcements .timestamp, .eventcalendar .timestamp {
   color: gray;
   text-align: right;
 }
-/* line 117, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 122, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .announcements .announcement, .eventcalendar .announcement {
   text-align: left;
   box-shadow: 1px 1px 1px #aaaaaa;
   padding: 2px;
+  margin-top: 5px;
+  background-color: #F0F0F0;
+  border: 1px solid #BFBFBF;
 }
 
-/* line 123, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 131, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .eventcalendar, .announcements, .imagecarousel {
   margin-top: 20px;
 }
 
-/* line 126, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
-.row.fbcheader, section.fbcheader {
-  margin: 0px 0px 0px 0px;
+@media only screen and (min-device-width: 600px) {
+  /* line 135, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+  .row.fbcheader img, section.fbcheader img {
+    max-width: 70%;
+  }
+}
+/* line 140, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+.row.fbcheader p, section.fbcheader p {
   text-align: center;
-  font-size: 1.5em;
-  width: 100%;
+}
+@media only screen and (max-device-width: 600px) {
+  /* line 140, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+  .row.fbcheader p, section.fbcheader p {
+    font-size: 16px;
+  }
 }
 
-/* line 132, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 147, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .fbimage {
   width: 40%;
   margin: auto;
 }
 
-/* line 136, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 151, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .CarouselImg {
   width: 100%;
 }
 
-/* line 139, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 154, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .carousel-inner, .carousel-inner > .item > img {
   width: auto;
   max-height: 250px !important;
 }
 
-/* line 144, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+/* line 159, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
 .carousel-caption {
   text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+}
+
+/* line 163, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+.btn-custom {
+  background-color: #086fa1;
+  border-color: #086fa1;
+}
+
+/* line 167, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+.btn-custom.disabled {
+  opacity: 1;
+  background-color: #086fa1;
+  border-color: #086fa1;
+}
+
+/* line 175, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+  background-color: #075e89;
+  border-color: #064e70;
+}
+
+/* line 190, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active {
+  background-color: #086fa1;
+  border-color: #086fa1;
+}
+
+/* line 195, /Users/ssalinas/code/fbcbangor/app/assets/stylesheets/framework_and_overrides.css.scss */
+.simple_form label, input, textarea {
+  width: 100%;
+  height: 100%;
 }
 /*!
  * FullCalendar v1.6.4 Stylesheet

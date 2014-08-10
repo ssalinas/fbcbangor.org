@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   end
 
   def about
-    @contents = Array(Content.where(page: 'about')) || []
+    @contents = Array(Content.where(page: 'about').order('priority ASC')) || []
   end
 
   def directions

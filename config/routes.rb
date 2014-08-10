@@ -35,6 +35,7 @@ Rails.application.routes.draw do
       get :find_us
       get :contact
       get :info
+      get :images
     end
   end
 

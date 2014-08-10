@@ -1,0 +1,17 @@
+<div class='row'>
+    <h2>Image Management</h2>
+    <p>Most images for the FBC Bsngor site are not stored on the site's server, but are pulled from other places around the internet</p>
+    <br>
+    <p>In areas where you have the option to specify an image source you can do one of two things:</p>
+    <li>If the image is on the server, simply input the name of the image (i.e. church.jpg). Check out the <%= link_to 'list of images on the server', images_contents_path %></li>
+    <li>To use an image from somewhere else, specify the full path of the image. It shoudl look something like http://i.imgur.com/kINbzYp.jpg</li>
+    <br>
+    <h3>Uploading new Images</h3>
+    <p>The easiest way to add a new image is to upload it on a site such as Imgur</p>
+    <br>
+    <p>Simply go to <a href='http://www.imgur.com'>imgur.com</a> and look for the upload link:</p>
+    <%= image_tag 'imgur_upload.jpg' %>
+    <p>click and drag or choose your image to upload and click start upload</p>
+    <br>
+    <p>Once the image is uploaded, find the url for the image (something like http://i.imgur.com/kINbzYp.jpg). That is the text to use as the image source when putting into the content mangement sections of the admin view</p>
+</div>

@@ -1,5 +1,6 @@
 <p>
     <% if @can_edit %>
+        <%= render 'pages/help/events' %>
         <% link_to 'Create Event', 'javascript:void()', id: 'new_event' %>
     <% end %>
 </p>

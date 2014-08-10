@@ -1,3 +1,18 @@
 <div class='container'>
-    STUFF HERE
+    <%= render 'pages/help/general' %>
+    <%= render 'pages/help/announcements' %>
+    <%= render 'pages/help/events' %>
+    <%= render 'pages/help/images' %>
+    <%= render 'pages/help/users' %>
+    <div class='row'><h2>Content Management</h2></div>
+    <%= render 'pages/help/content/about' %>
+    <%= render 'pages/help/content/find_us' %>
+    <%= render 'pages/help/content/contact' %>
+    <%= render 'pages/help/content/home' %>
+    <div class='row'>
+        <h2>Broke Something??? Really Stuck???</h2>
+        <%= mail_to 'shsalinas2012@gmail.com' do %>
+            <p>Ask Stephen!</p>
+        <% end %>
+    </div>
 </div>

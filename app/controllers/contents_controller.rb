@@ -69,7 +69,7 @@ class ContentsController < ApplicationController
   # DELETE /contents/1
   def destroy
     @content.destroy
-    redirect_to contents_url, notice: 'Content was successfully destroyed.'
+    redirect_to :back, notice: 'Content was successfully destroyed.'
   end
 
   private
