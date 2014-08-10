@@ -3,10 +3,13 @@
     <% @contents.each do |content| %>
         <div class='row announcements'>
             <%= render 'about_form', content: content %>
+          <div class='col-md-9'></div>
+          <div class='col-md-3'>
+              <%= button_to 'Delete Section', content, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure?'} %>
+          </div>
         </div>
         <br>
     <% end %>
-
     <div class="btn-group" data-toggle="buttons-checkbox">
         <a class="btn collapse-data-btn" data-toggle="collapse" href="#new_about">Add A New Section</a>
     </div>

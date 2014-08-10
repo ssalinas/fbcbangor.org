@@ -8,6 +8,9 @@
               <%= f.input :section %>
               <%= f.hint 'Header/Title for the section' %>
           </div>
+          <div class='col-md-3'>
+              <%= f.input :priority, as: :integer %>
+          </div>
       </div>
       <div class='row'>
           <div class='col-md-9'>
@@ -24,6 +27,6 @@
         <div class="form-actions">
             <%= f.button :submit %>
         </div>
-    </div>
+      </div>
   </div>
 <% end %>
