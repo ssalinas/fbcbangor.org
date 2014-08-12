@@ -30,7 +30,7 @@ class Facebook
     {
       user_image: "http://graph.facebook.com/#{post['from']['id']}/picture",
       user_name: post['from']['name'],
-      img_src: post['picture'].gsub(/\/s\d{1,4}x\d{1,4}/, ''),
+      img_src: post['picture'] ? post['picture'].gsub(/\/s\d{1,4}x\d{1,4}/, '') : '',
       link: post['link'],
       caption: post['caption'],
       type: :photo
@@ -63,9 +63,9 @@ class Facebook
 
   def link_post(post)
     {
-      user_image: "http://graph.facebook.com/#{post['from']['id']}/picture",
-      user_name: post['from']['name'],
-      img_src: post['picture'].gsub(/\/s\d{1,4}x\d{1,4}/, ''),
+      user_image: post]'from']['id'] ? "http://graph.facebook.com/#{post['from']['id']}/picture" : '',
+      user_name: post['from']['name'] ? post['from']['name'] || '',
+      img_src: post['picture'] ? post['picture'].gsub(/\/s\d{1,4}x\d{1,4}/, '') : '',
       link: post['link'],
       caption: post['message'],
       type: :link
