@@ -9,14 +9,17 @@ class Facebook
   def facebook_feed
     data = @graph.get_connections(38163126787, "feed")
     data.each_with_object([]) do |post, formatted_data|
-      puts post
-      case post['type']
-      when 'photo'
-        valid_photo_post(post) ? formatted_data << photo_post(post) : nil
-      when 'status'
-        valid_status_post(post) ? formatted_data << status_post(post) : nil
-      when 'link'
-        valid_link_post(post) ? formatted_data << link_post(post) : nil
+      begin
+        case post['type']
+        when 'photo'
+          valid_photo_post(post) ? formatted_data << photo_post(post) : nil
+        when 'status'
+          valid_status_post(post) ? formatted_data << status_post(post) : nil
+        when 'link'
+          valid_link_post(post) ? formatted_data << link_post(post) : nil
+        end
+      rescue
+        next
       end
     end
   end
