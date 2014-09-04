@@ -1,20 +1,20 @@
 <div class='container'>
     <div class='row'>
         <div class='col-sm-3 col-xs-6'>
-            <%= Content.where(page: 'home', section: 'footer_left').first.content.html_safe %>
+            <%= Content.where(page: 'home', section: 'footer_1').first.content.html_safe %>
         </div>
         <div class='col-sm-3 col-xs-6'>
-            <%= Content.where(page: 'home', section: 'footer_right').first.content.html_safe %>
+            <%= Content.where(page: 'home', section: 'footer_2').first.content.html_safe %>
         </div>
         <div class="clearfix visible-xs-block"></div>
         <div class='col-sm-2 col-xs-4'>
-            <%= image_tag 'abcom.jpg' %>
+            <%= Content.where(page: 'home', section: 'footer_3').first.content.html_safe %>
         </div>
         <div class='col-sm-2 col-xs-4'>
-            <%= image_tag 'abcusa.gif' %>
+            <%= Content.where(page: 'home', section: 'footer_4').first.content.html_safe %>
         </div>
         <div class='col-sm-2 col-xs-4'>
-            <%= image_tag 'kupenda.jpg' %>
+            <%= Content.where(page: 'home', section: 'footer_5').first.content.html_safe %>
         </div>
   </div>
 </div>

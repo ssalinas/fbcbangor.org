@@ -21,7 +21,7 @@ class AnnouncementsController < ApplicationController
   def create
     @announcement = Announcement.new(announcement_params)
     if @announcement.save
-      redirect_to @announcement, notice: 'Announcement was successfully created.'
+      redirect_to announcements_url, notice: 'Announcement was successfully created.'
     else
       render :new
     end
@@ -29,7 +29,7 @@ class AnnouncementsController < ApplicationController
 
   def update
     if @announcement.update(announcement_params)
-      redirect_to @announcement, notice: 'Announcement was successfully updated.'
+      redirect_to announcements_url, notice: 'Announcement was successfully updated.'
     else
       render :edit
     end

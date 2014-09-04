@@ -14,8 +14,11 @@ class ContentsController < ApplicationController
   def homepage
     @image = Content.where(page: 'home', section: 'image').first
     @slogan = Content.where(page: 'home', section: 'slogan').first
-    @footer_left = Content.where(page: 'home', section: 'footer_left').first
-    @footer_right = Content.where(page: 'home', section: 'footer_right').first
+    @footer_1 = Content.where(page: 'home', section: 'footer_1').first
+    @footer_2 = Content.where(page: 'home', section: 'footer_2').first
+    @footer_3 = Content.where(page: 'home', section: 'footer_3').first
+    @footer_4 = Content.where(page: 'home', section: 'footer_4').first
+    @footer_5 = Content.where(page: 'home', section: 'footer_5').first
   end
 
   def find_us
@@ -80,6 +83,6 @@ class ContentsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def content_params
-      params.require(:content).permit(:page, :section, :content, :image_src)
+      params.require(:content).permit(:page, :section, :content, :image_src, :priority)
     end
 end

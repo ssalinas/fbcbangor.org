@@ -3,7 +3,7 @@
     <% @announcements.each do |announcement| %>
         <div class='announcement'>
             <h4><%= announcement.title %></h4>
-            <p><%= announcement.description %></p>
+            <p><%= auto_link(announcement.description) %></p>
             <div class='timestamp'><p><%= announcement.updated_at.strftime('Updated at %c') %></p></div>
         </div>
     <% end %>

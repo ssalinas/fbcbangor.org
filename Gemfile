@@ -18,6 +18,7 @@ gem 'devise'
 gem 'gon'
 gem 'whats_up_doc'
 gem 'newrelic_rpm'
+gem 'rails_autolink'
 
 group :production do
   gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
